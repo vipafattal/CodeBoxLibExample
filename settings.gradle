@@ -1,1 +1,1 @@
-include ':app', ':codeboxlibrary'
+include ':app', ':CodeBox-Android'
