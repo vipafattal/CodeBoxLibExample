@@ -1,3 +1,5 @@
+package com.codebox.lib.standard.date
+
 import java.util.*
 import java.util.Calendar.*
 
@@ -21,6 +23,11 @@ operator fun Date.minus(date: Date): Date? {
     }.time
 }
 
+infix fun Date.subtractMonths(numbersOfMonths: Int): Date =
+        getInstance().apply {
+            time = this@subtractMonths
+            add(MONTH, -numbersOfMonths)
+        }.time
 
 infix fun Date.subtractDays(days: Int): Date =
         getInstance().apply {
