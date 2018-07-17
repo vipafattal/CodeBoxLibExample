@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="trans_white">#3cffffff</color>
     <array name="A700">
         <item>@color/DeepOrange</item>
         <item>@color/Amber</item>
@@ -15,6 +16,22 @@
         <item>@color/Purple</item>
         <item>@color/Pink</item>
         <item>@color/Red</item>
+    </array>
+    <array name="A400">
+        <item>@color/orange_A400</item>
+        <item>@color/deep_orange_A400</item>
+        <item>@color/yellow_A400</item>
+        <item>@color/amber_A400</item>
+        <item>@color/green_A400</item>
+        <item>@color/lime_A400</item>
+        <item>@color/red_A400</item>
+        <item>@color/pink_A400</item>
+        <item>@color/purple_A400</item>
+        <item>@color/deep_purple_A400</item>
+        <item>@color/indigo_A400</item>
+        <item>@color/blue_A400</item>
+        <item>@color/cyan_A400</item>
+        <item>@color/light_blue_A400</item>
     </array>
 </resources>
 

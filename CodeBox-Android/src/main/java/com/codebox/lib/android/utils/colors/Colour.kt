@@ -1,4 +1,4 @@
-package com.codebox.lib.android.Utils.colors
+package com.codebox.lib.android.utils.colors
 
 import android.graphics.Color
 import com.codebox.lib.android.resoures.Colour

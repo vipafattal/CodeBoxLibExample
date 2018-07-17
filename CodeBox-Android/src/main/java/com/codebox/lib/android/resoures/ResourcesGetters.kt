@@ -5,7 +5,7 @@ import android.content.res.Resources
 import android.support.v4.content.ContextCompat
 import com.codebox.lib.android.os.AppContextProvider.Companion.appContext
 
-val appResources: Resources by lazy { appContext.resources }
+val appResources: Resources = appContext.resources
 
 
 fun Colour(colorID: Int, context: Context = appContext): Int = ContextCompat.getColor(context, colorID)
