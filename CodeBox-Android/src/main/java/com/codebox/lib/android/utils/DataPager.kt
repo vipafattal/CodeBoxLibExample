@@ -3,8 +3,11 @@ package com.codebox.lib.android.utils
 import android.support.v7.app.AppCompatActivity
 import com.codebox.lib.standard.lambda.unitFun
 
-class DataPager<T : Any>(val dataList: List<T>) {
+class DataPager<T : Any>(
+        @PublishedApi internal
+        val dataList: List<T>) {
 
+    @PublishedApi internal
     var pagerActivity: AppCompatActivity? = null
         private set
 

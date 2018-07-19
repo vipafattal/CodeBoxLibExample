@@ -12,10 +12,8 @@ internal val appAccentColor = getAttributeColor(colorAttribute = R.attr.colorAcc
 fun View.snackbar(message: CharSequence, duration: Int = Snackbar.LENGTH_INDEFINITE) {
     val snackbar = Snackbar.make(this, message, duration)
 
-    snackbar.setActionTextColor(
-            Colour(appAccentColor)
-    )
-    snackbar.setAction("Dismiss", { snackbar.dismiss() })
+    snackbar.setActionTextColor(appAccentColor)
+    snackbar.setAction("Dismiss") { snackbar.dismiss() }
             .show()
 }
 
@@ -23,10 +21,8 @@ fun AppCompatActivity.snackbar(message: CharSequence, duration: Int = Snackbar.L
     val rootView = window.decorView.rootView
 
     val snackBar = Snackbar.make(rootView, message, duration)
-    snackBar.setActionTextColor(
-            Colour(appAccentColor)
-    )
-    snackBar.setAction("Dismiss", { snackBar.dismiss() })
+    snackBar.setActionTextColor(appAccentColor)
+    snackBar.setAction("Dismiss") { snackBar.dismiss() }
             .show()
 }
 
@@ -34,9 +30,8 @@ fun AppCompatActivity.snackbar(message: Int, duration: Int = Snackbar.LENGTH_IND
     val rootView = window.decorView.rootView
 
     val snackBar = Snackbar.make(rootView, getString(message), duration)
-    snackBar.setActionTextColor(
-            Colour(appAccentColor)
+    snackBar.setActionTextColor(Colour(appAccentColor)
     )
-    snackBar.setAction("Dismiss", { snackBar.dismiss() })
+    snackBar.setAction("Dismiss") { snackBar.dismiss() }
             .show()
 }
