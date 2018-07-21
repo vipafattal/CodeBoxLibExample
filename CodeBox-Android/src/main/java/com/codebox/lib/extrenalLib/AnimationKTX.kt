@@ -21,7 +21,7 @@ import android.support.annotation.RequiresApi
 
 
 /**
- * Add an action which will be invoked when the animation has ended.
+ * Add an onActionClick which will be invoked when the animation has ended.
  *
  * @return the [Animator.AnimatorListener] added to the Animator
  * @see Animator.end
@@ -30,7 +30,7 @@ import android.support.annotation.RequiresApi
 internal fun Animator.doOnEnd(action: (animator: Animator) -> Unit) = addListener(onEnd = action)
 
 /**
- * Add an action which will be invoked when the animation has started.
+ * Add an onActionClick which will be invoked when the animation has started.
  *
  * @return the [Animator.AnimatorListener] added to the Animator
  * @see Animator.start
@@ -39,7 +39,7 @@ internal fun Animator.doOnEnd(action: (animator: Animator) -> Unit) = addListene
 internal fun Animator.doOnStart(action: (animator: Animator) -> Unit) = addListener(onStart = action)
 
 /**
- * Add an action which will be invoked when the animation has been cancelled.
+ * Add an onActionClick which will be invoked when the animation has been cancelled.
  *
  * @return the [Animator.AnimatorListener] added to the Animator
  * @see Animator.cancel
@@ -48,14 +48,14 @@ internal fun Animator.doOnStart(action: (animator: Animator) -> Unit) = addListe
 internal fun Animator.doOnCancel(action: (animator: Animator) -> Unit) = addListener(onCancel = action)
 
 /**
- * Add an action which will be invoked when the animation has repeated.
+ * Add an onActionClick which will be invoked when the animation has repeated.
  * @return the [Animator.AnimatorListener] added to the Animator
  */
 @PublishedApi
 internal fun Animator.doOnRepeat(action: (animator: Animator) -> Unit) = addListener(onRepeat = action)
 
 /**
- * Add an action which will be invoked when the animation has resumed after a pause.
+ * Add an onActionClick which will be invoked when the animation has resumed after a pause.
  *
  * @return the [Animator.AnimatorPauseListener] added to the Animator
  * @see Animator.resume
@@ -65,7 +65,7 @@ internal fun Animator.doOnRepeat(action: (animator: Animator) -> Unit) = addList
 internal fun Animator.doOnResume(action: (animator: Animator) -> Unit) = addPauseListener(onResume = action)
 
 /**
- * Add an action which will be invoked when the animation has been paused.
+ * Add an onActionClick which will be invoked when the animation has been paused.
  *
  * @return the [Animator.AnimatorPauseListener] added to the Animator
  * @see Animator.pause

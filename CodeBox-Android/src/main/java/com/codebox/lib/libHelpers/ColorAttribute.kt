@@ -4,16 +4,12 @@ import android.content.Context
 import android.support.annotation.AttrRes
 import android.support.annotation.ColorInt
 import android.support.v4.content.ContextCompat
-import com.codebox.lib.android.os.AppContextProvider.Companion.appContext
-import android.R.attr.data
 import android.util.TypedValue
-import android.support.annotation.NonNull
-
-
+import com.codebox.lib.R
 
 
 @ColorInt
-internal fun getAttributeColor(context: Context = appContext, @AttrRes colorAttribute: Int): Int {
+internal fun getAttributeColor(context: Context, @AttrRes colorAttribute: Int): Int {
     val attrs = intArrayOf(colorAttribute)
     val ta = context.obtainStyledAttributes(attrs)
     /*Get the color resourceID that we want (the first index, and only item, in the
@@ -26,12 +22,12 @@ internal fun getAttributeColor(context: Context = appContext, @AttrRes colorAttr
     return color
 }
 
-@ColorInt
-fun getThemeColor(
-        context: Context,
-        @AttrRes attributeColor: Int
-): Int {
-    val value = TypedValue()
-    context.theme.resolveAttribute(attributeColor, value, true)
-    return value.data
+fun getThemeAccentColor(context: Context): Int {
+
+    val typedValue = TypedValue()
+    val a = context.obtainStyledAttributes(typedValue.data, intArrayOf(R.attr.colorAccent))
+    val color = a.getColor(0, 0)
+    a.recycle()
+
+    return color
 }
