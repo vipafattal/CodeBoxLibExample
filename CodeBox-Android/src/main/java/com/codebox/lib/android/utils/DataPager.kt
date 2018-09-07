@@ -7,7 +7,8 @@ class DataPager<T : Any>(
         @PublishedApi internal
         val dataList: List<T>) {
 
-    @PublishedApi internal
+    @PublishedApi
+    internal
     var pagerActivity: AppCompatActivity? = null
         private set
 

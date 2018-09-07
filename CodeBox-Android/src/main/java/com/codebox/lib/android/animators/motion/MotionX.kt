@@ -29,5 +29,4 @@ fun View.motionXAnimator(valueFrom: Float, valueTo: Float, time: Interval, inter
             addUpdateListener {
                 x = it.animatedValue as Float
             }
-
         }
