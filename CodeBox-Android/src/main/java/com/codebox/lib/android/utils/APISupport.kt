@@ -1,4 +1,4 @@
-package com.codebox.lib.android.os
+package com.codebox.lib.android.utils
 
 import android.os.Build
 import com.codebox.lib.standard.lambda.unitFun
@@ -8,7 +8,7 @@ import com.codebox.lib.standard.lambda.unitFun
  */
 
 
-inline fun versionSupport(newerSDK: Int, newerSDKBlock: () -> Unit, olderSDKBlock: () -> Unit) {
+inline fun apiSupport(newerSDK: Int, newerSDKBlock: () -> Unit, olderSDKBlock: () -> Unit) {
     if (Build.VERSION.SDK_INT >= newerSDK)
         newerSDKBlock()
     else

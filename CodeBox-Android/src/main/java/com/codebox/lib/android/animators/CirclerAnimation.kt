@@ -3,7 +3,7 @@ package com.codebox.lib.android.animators
 import android.view.View
 import android.view.ViewAnimationUtils
 import com.codebox.lib.R
-import com.codebox.lib.android.os.versionSupport
+import com.codebox.lib.android.utils.versionSupport
 import com.codebox.lib.android.resoures.Colour
 
 /**
