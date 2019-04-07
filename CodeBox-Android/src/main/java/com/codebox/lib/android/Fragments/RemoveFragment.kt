@@ -1,8 +1,5 @@
 package com.codebox.lib.android.Fragments
 
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentActivity
-
-fun FragmentActivity.removeFragment(frag: Fragment) {
+fun androidx.fragment.app.FragmentActivity.removeFragment(frag: androidx.fragment.app.Fragment) {
     supportFragmentManager.beginTransaction().remove(frag).commit()
 }

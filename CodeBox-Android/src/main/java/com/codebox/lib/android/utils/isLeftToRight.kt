@@ -1,7 +1,7 @@
 package com.codebox.lib.android.utils
 
-import android.support.v4.text.TextUtilsCompat
-import android.support.v4.view.ViewCompat
+import androidx.core.text.TextUtilsCompat
+import androidx.core.view.ViewCompat
 import java.util.*
 
 val isRightToLeft: Int

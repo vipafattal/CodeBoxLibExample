@@ -1,8 +1,8 @@
 package com.codebox.lib.android.widgets.snackbar
 
-import android.support.design.widget.Snackbar
 import com.codebox.lib.libHelpers.getThemeAccentColor
 import com.codebox.lib.standard.lambda.unitFun
+import com.google.android.material.snackbar.Snackbar
 
 /**
  * show Action with snackbar with dismiss on action text clicked

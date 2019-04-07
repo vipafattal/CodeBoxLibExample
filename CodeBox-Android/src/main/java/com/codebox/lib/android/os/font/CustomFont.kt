@@ -3,7 +3,7 @@ package com.codebox.lib.android.os.font
 import android.graphics.Typeface
 
 import android.widget.TextView
-import com.codebox.lib.android.os.AppContextProvider.Companion.appContext
+import com.codebox.lib.android.os.AppContextProvider.appContext
 
 /**
  * Created by Abed on 3/2/2018.

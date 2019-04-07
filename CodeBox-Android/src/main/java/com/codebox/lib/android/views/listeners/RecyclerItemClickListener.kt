@@ -1,17 +1,16 @@
 package com.codebox.lib.android.views.listeners
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
-import com.codebox.lib.android.os.AppContextProvider.Companion.appContext
+import com.codebox.lib.android.os.AppContextProvider.appContext
 
 /**
  * Created by CodeBox on 7/30/2017.
  */
 
-class RecyclerItemClickListener(context: Context = appContext, private val mListener: OnItemClickListener?) : RecyclerView.OnItemTouchListener {
+class RecyclerItemClickListener(context: Context = appContext, private val mListener: OnItemClickListener?) : androidx.recyclerview.widget.RecyclerView.OnItemTouchListener {
 
     private val mGestureDetector: GestureDetector = GestureDetector(context, object : GestureDetector.SimpleOnGestureListener() {
         override fun onSingleTapUp(e: MotionEvent): Boolean {
@@ -23,7 +22,7 @@ class RecyclerItemClickListener(context: Context = appContext, private val mList
         fun onItemClick(view: View, position: Int)
     }
 
-    override fun onInterceptTouchEvent(view: RecyclerView, e: MotionEvent): Boolean {
+    override fun onInterceptTouchEvent(view: androidx.recyclerview.widget.RecyclerView, e: MotionEvent): Boolean {
         val childView = view.findChildViewUnder(e.x, e.y)
 
         if (childView != null && mListener != null && mGestureDetector.onTouchEvent(e)) {
@@ -33,7 +32,7 @@ class RecyclerItemClickListener(context: Context = appContext, private val mList
         return false
     }
 
-    override fun onTouchEvent(view: RecyclerView, motionEvent: MotionEvent) {}
+    override fun onTouchEvent(view: androidx.recyclerview.widget.RecyclerView, motionEvent: MotionEvent) {}
 
     override fun onRequestDisallowInterceptTouchEvent(disallowIntercept: Boolean) {}
 }

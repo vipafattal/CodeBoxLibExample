@@ -2,7 +2,7 @@ package com.codebox.lib.android.utils
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.codebox.lib.android.os.AppContextProvider.Companion.appContext
+import com.codebox.lib.android.os.AppContextProvider.appContext
 import com.codebox.lib.extrenalLib.edit
 import java.util.*
 
@@ -10,9 +10,9 @@ import java.util.*
 /**
  * Created by Abed on 12/14/2017.
  */
-class SharedPrefererance {
+class AppPreferences {
     companion object {
-        val instance: SharedPrefererance by lazy { SharedPrefererance() }
+        val instance: AppPreferences by lazy { AppPreferences() }
 
         private const val DATA_KEY = "KidsLab"
         private val mPref: SharedPreferences by lazy { appContext.getSharedPreferences(DATA_KEY, Context.MODE_PRIVATE) }

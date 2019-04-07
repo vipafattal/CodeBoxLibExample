@@ -2,8 +2,8 @@ package com.codebox.lib.android.resoures
 
 import android.content.Context
 import android.content.res.Resources
-import android.support.v4.content.ContextCompat
-import com.codebox.lib.android.os.AppContextProvider.Companion.appContext
+import androidx.core.content.ContextCompat
+import com.codebox.lib.android.os.AppContextProvider.appContext
 
 val appResources: Resources = appContext.resources
 

@@ -1,7 +1,7 @@
 package com.codebox.lib.android.widgets
 
 import android.widget.Toast
-import com.codebox.lib.android.os.AppContextProvider.Companion.appContext
+import com.codebox.lib.android.os.AppContextProvider.appContext
 
 fun longToast(text: String) {
     Toast.makeText(appContext, text, Toast.LENGTH_LONG).show()

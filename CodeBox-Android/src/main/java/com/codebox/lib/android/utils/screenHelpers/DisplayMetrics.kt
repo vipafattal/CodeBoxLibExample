@@ -2,8 +2,7 @@ package com.codebox.lib.android.utils.screenHelpers
 
 import android.util.DisplayMetrics
 import android.util.TypedValue
-import android.widget.TextView
-import com.codebox.lib.android.os.AppContextProvider.Companion.appContext
+import com.codebox.lib.android.os.AppContextProvider.appContext
 import com.codebox.lib.android.resoures.appResources
 
 

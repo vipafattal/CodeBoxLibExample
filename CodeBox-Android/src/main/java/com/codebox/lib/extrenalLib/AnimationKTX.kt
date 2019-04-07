@@ -1,7 +1,7 @@
 package com.codebox.lib.extrenalLib
 
 import android.animation.Animator
-import android.support.annotation.RequiresApi
+import androidx.annotation.RequiresApi
 
 /*
  * Copyright (C) 2017 The Android Open Source Project

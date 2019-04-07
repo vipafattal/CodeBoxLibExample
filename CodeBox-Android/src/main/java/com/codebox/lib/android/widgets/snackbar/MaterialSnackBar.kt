@@ -1,10 +1,10 @@
 package com.codebox.lib.android.widgets.snackbar
 
-import android.support.design.widget.Snackbar
 import android.view.ViewGroup
 import com.codebox.lib.R
 import com.codebox.lib.android.resoures.Image
 import com.codebox.lib.android.utils.screenHelpers.dp
+import com.google.android.material.snackbar.Snackbar
 
 
 fun Snackbar.material(isWithBottom: Boolean = false): Snackbar {

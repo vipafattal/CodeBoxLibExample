@@ -31,3 +31,15 @@ fun Date.getDays(): Int {
     cal.time = this
     return cal.get(Calendar.DAY_OF_MONTH)
 }
+
+fun Date.getMinutes(): Int {
+    val cal = Calendar.getInstance()
+    cal.time = this
+    return cal.get(Calendar.MINUTE)
+}
+
+fun Date.getHours(): Int {
+    val cal = Calendar.getInstance()
+    cal.time = this
+    return cal.get(Calendar.HOUR_OF_DAY)
+}

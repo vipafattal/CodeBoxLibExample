@@ -8,14 +8,7 @@ import com.codebox.lib.standard.lambda.unitFun
  */
 
 
-inline fun apiSupport(newerSDK: Int, newerSDKBlock: () -> Unit, olderSDKBlock: () -> Unit) {
-    if (Build.VERSION.SDK_INT >= newerSDK)
-        newerSDKBlock()
-    else
-        olderSDKBlock()
-}
-
-inline fun versionSupport(SDKVersion: Int, codeBlock: unitFun) {
+inline fun sdkSupport(SDKVersion: Int, codeBlock: unitFun) {
     if (Build.VERSION.SDK_INT >= SDKVersion) {
         codeBlock()
     }
