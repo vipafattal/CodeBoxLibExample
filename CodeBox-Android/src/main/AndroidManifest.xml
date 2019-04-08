@@ -1,11 +1,5 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.codebox.lib">
+<manifest package="com.codebox.lib">
 
     <application>
-        <provider
-            android:name=".android.os.AppContextProvider"
-            android:authorities="${applicationId}.android.AppContextProvider"
-            android:enabled="true"
-            android:exported="false" />
     </application>
 </manifest>
