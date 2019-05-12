@@ -1,4 +1,4 @@
-package com.codebox.lib.standard.Collections.filters
+package com.codebox.lib.standard.collections.filters
 
 fun <T>ArrayList<T>.addWhile(predicate:(T) -> Boolean){
     this.filter(predicate)

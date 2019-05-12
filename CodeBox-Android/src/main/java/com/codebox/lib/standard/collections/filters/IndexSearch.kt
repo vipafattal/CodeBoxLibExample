@@ -1,21 +1,19 @@
-package com.codebox.lib.standard.Collections.filters
+package com.codebox.lib.standard.collections.filters
 
-
-inline fun <T> Iterable<T>.singleIdx(predicate: (T) -> Boolean): Pair<T, Int> {
+fun <T> Iterable<T>.itemIndex(predicate: (T) -> Boolean): Int {
     var index = 0
     for (element in this) {
         if (predicate(element))
-            return element to index
+            return index
         index++
     }
     throw NoSuchElementException("Collection contains no element matching the predicate.")
 }
-
-inline fun <T> Iterable<T>.singleIdxNull(predicate: (T) -> Boolean): Pair<T, Int>? {
+fun <T> Iterable<T>.itemIndexOrNull(predicate: (T) -> Boolean): Int? {
     var index = 0
     for (element in this) {
         if (predicate(element))
-            return element to index
+            return index
         index++
     }
     return null

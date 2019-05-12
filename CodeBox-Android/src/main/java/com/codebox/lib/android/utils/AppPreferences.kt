@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.codebox.lib.android.os.AppContextProvider.appContext
 import com.codebox.lib.extrenalLib.edit
-import java.util.*
 
 
 /**
@@ -21,24 +20,24 @@ class AppPreferences {
 
     }
 
-    fun getDouble(key: String): Double {
-        return mPref.getString(key, "0.0").toDouble()
+    fun getDouble(key: String, defValue: Double = 0.0): Double {
+        return mPref.getString(key, defValue.toString())!!.toDouble()
     }
 
     fun getInt(key: String, defValue: Int = 0): Int {
         return mPref.getInt(key, defValue)
     }
 
-    fun getLong(key: String): Long {
-        return mPref.getLong(key, Date().time)
+    fun getLong(key: String, defValue: Long = 0): Long {
+        return mPref.getLong(key, defValue)
     }
 
     fun getBoolean(key: String, defValue: Boolean = false): Boolean {
         return mPref.getBoolean(key, defValue)
     }
 
-    fun getStr(key: String): String {
-        return mPref.getString(key, "No data")
+    fun getStr(key: String, defValue: String = "No data"): String {
+        return mPref.getString(key, defValue)!!
     }
 
     fun put(key: String, `val`: String) {

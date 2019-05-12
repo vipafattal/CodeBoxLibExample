@@ -1,4 +1,4 @@
-package com.codebox.lib.standard.Collections
+package com.codebox.lib.standard.collections
 
 /**
  * Created by Abed on 2/10/2018.
