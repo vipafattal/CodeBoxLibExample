@@ -1,4 +1,4 @@
-package com.codebox.lib.android.Fragments
+package com.codebox.lib.android.fragments
 
 import androidx.annotation.AnimRes
 import androidx.annotation.AnimatorRes
