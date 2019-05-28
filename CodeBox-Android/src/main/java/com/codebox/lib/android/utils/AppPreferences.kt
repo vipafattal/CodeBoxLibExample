@@ -10,15 +10,17 @@ import com.codebox.lib.extrenalLib.edit
  * Created by Abed on 12/14/2017.
  */
 class AppPreferences {
+
     companion object {
-        val instance: AppPreferences by lazy { AppPreferences() }
-
-        private const val DATA_KEY = "KidsLab"
-        private val mPref: SharedPreferences by lazy { appContext.getSharedPreferences(DATA_KEY, Context.MODE_PRIVATE) }
-        /* The private set is used
-         so that a value can’t be assigned from an external class.*/
-
+        fun getInstance(sharedPreferencesFileName: String): AppPreferences {
+            val appPreferences = AppPreferences()
+            appPreferences.fileName = sharedPreferencesFileName
+            return appPreferences
+        }
     }
+
+    private var fileName = "AppPreferences"
+    private val mPref: SharedPreferences by lazy { appContext.getSharedPreferences(fileName, Context.MODE_PRIVATE) }
 
     fun getDouble(key: String, defValue: Double = 0.0): Double {
         return mPref.getString(key, defValue.toString())!!.toDouble()
